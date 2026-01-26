@@ -5,7 +5,7 @@
 
 ## Add skilss
 
-Use [skills] or [add-skill] quick add skills
+Use npm [skills](https://npm.im/skills) or [add-skill](https://npm.im/add-skill) quick add skills
 
 ```bash
 npx skills add https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
@@ -15,9 +15,18 @@ npx skills add vercel-labs/agent-skills --skill web-design-guidelines
 npx add-skill https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
 ```
 
+## Create a skill
+
+TODO:
+
 ## References
 
 - <https://github.com/anthropics/skills>
 - <https://www.npmjs.com/package/add-skill>
 - <https://www.npmjs.com/package/skills>
 - <https://skills.sh/>
+
+## Others
+
+- [别把整个 GitHub 装进 Skills，Skills 的正确用法](https://x.com/dotey/status/2014607139352859077)
+- [Skill 不就是长一点的提示词吗？](https://x.com/dotey/status/2015212857374413040)

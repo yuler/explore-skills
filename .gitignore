@@ -15,3 +15,7 @@ dist
 # Envs
 .env
 .env.*.local
+
+# IDEs & Agents
+.cursor
+.agents
