@@ -478,27 +478,49 @@ npx skills add https://github.com/michalparkola/tapestry-skills-for-claude-code/
 layout: section
 ---
 
-# 编写自己的 SKILL
-
----
-
-# 最简单的 SKILL 示例
+# 编写一个简单的的 SKILL
 
 **git-commit SKILL**
+
 
 ```md
 ---
 name: git-commit
-description: Create a human-readable commit include emoji
+description: Generates human-readable commit messages with leading emoji by analyzing git diff. Use when the user wants to commit, needs a commit message, or asks to summarize staged/unstaged changes. Ignores lock files (e.g. pnpm-lock.yaml).
 ---
 
 ## What I do
 
-- Generate a human-readable commit message include emoji
+- Analyze `git diff` (or `git diff --staged`) to see what changed
+- Produce a single-line commit message starting with an emoji, simple and human-readable
+- Prefer ignoring lock/bundle files: `pnpm-lock.yaml`, `package-lock.json`, `yarn.lock`, etc., unless the change is only in those files
+- Push to remote
 
 ## When to use me
 
-- Use it when need git commit
+- User wants to run `git commit` or write a commit message
+- Include all changes from stash
+
+## Commit message format
+
+- One short sentence
+- Start with an emoji, then the message
+- Prefer present tense and active voice (e.g. "Add feature" not "Added feature")
+
+## Emoji reference
+
+| Change type        | Emoji | Example                    |
+|--------------------|-------|----------------------------|
+| New feature        | ✨    | ✨ Add login form          |
+| Bug fix            | 🐛    | 🐛 Fix date timezone       |
+| Documentation      | 📝    | 📝 Update API readme       |
+| Style / format     | 💄    | 💄 Format with prettier    |
+| Refactor           | ♻️    | ♻️ Extract auth helper    |
+| Performance        | ⚡    | ⚡ Lazy load images       |
+| Dependencies       | 📦    | 📦 Upgrade React to 19    |
+| Config / tooling   | 🔧    | 🔧 Add ESLint rule        |
+
+Pick the closest type; keep the message concise.
 ```
 
 ---
