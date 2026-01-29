@@ -7,6 +7,13 @@
   "author": "yuler<is.yuler@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.11.4",
+    "@slidev/theme-default": "^0.25.0"
   }
 }
