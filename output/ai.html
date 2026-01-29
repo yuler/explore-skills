@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 安全原则</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #141413 0%, #2a2925 100%);
+            font-family: 'Lora', Georgia, serif;
+            padding: 40px;
+        }
+
+        .card {
+            background: #faf9f5;
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d97757 0%, #6a9bcc 50%, #788c5d 100%);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+            background: #d97757;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #141413;
+            line-height: 1.2;
+        }
+
+        .principles {
+            list-style: none;
+        }
+
+        .principle {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e8e6dc;
+        }
+
+        .principle:last-child {
+            border-bottom: none;
+        }
+
+        .principle-number {
+            width: 32px;
+            height: 32px;
+            background: #141413;
+            color: #faf9f5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .principle:nth-child(1) .principle-number { background: #d97757; }
+        .principle:nth-child(2) .principle-number { background: #6a9bcc; }
+        .principle:nth-child(3) .principle-number { background: #788c5d; }
+        .principle:nth-child(4) .principle-number { background: #d97757; }
+
+        .principle-content h3 {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #141413;
+            margin-bottom: 4px;
+        }
+
+        .principle-content p {
+            font-size: 14px;
+            color: #b0aea5;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e8e6dc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .footer-dot:nth-child(1) { background: #d97757; }
+        .footer-dot:nth-child(2) { background: #6a9bcc; }
+        .footer-dot:nth-child(3) { background: #788c5d; }
+
+        .footer-text {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 12px;
+            color: #b0aea5;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <h1 class="title">AI 安全原则</h1>
+        </div>
+
+        <ul class="principles">
+            <li class="principle">
+                <span class="principle-number">1</span>
+                <div class="principle-content">
+                    <h3>有益性</h3>
+                    <p>AI 系统应该对人类和社会产生积极影响，帮助解决问题而非制造伤害。</p>
+                </div>
+            </li>
+            <li class="principle">
+                <span class="principle-number">2</span>
+                <div class="principle-content">
+                    <h3>安全性</h3>
+                    <p>确保 AI 系统可靠、可控，防止意外后果和潜在的恶意使用。</p>
+                </div>
+            </li>
+            <li class="principle">
+                <span class="principle-number">3</span>
+                <div class="principle-content">
+                    <h3>透明性</h3>
+                    <p>AI 的决策过程应当可解释，让用户了解系统如何工作和做出决定。</p>
+                </div>
+            </li>
+            <li class="principle">
+                <span class="principle-number">4</span>
+                <div class="principle-content">
+                    <h3>公平性</h3>
+                    <p>避免算法偏见，确保 AI 系统对不同群体一视同仁，促进包容性。</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="footer">
+            <span class="footer-dot"></span>
+            <span class="footer-dot"></span>
+            <span class="footer-dot"></span>
+            <span class="footer-text">Anthropic Design</span>
+        </div>
+    </div>
+</body>
+</html>
